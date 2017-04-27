@@ -190,23 +190,23 @@
     </style>
 </head>
 <body>
-<div class="header low">
+<div class="header high">
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-json-colorizer">npmtest-json-colorizer (v0.0.1)</a>
     </h1>
     <h1>Code coverage report for <span class="entity">node-npmtest-json-colorizer/node_modules/json-colorizer/src/lib/lexer.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">11.76% <small>(2 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">100% <small>(17 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">0% <small>(0 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">83.33% <small>(5 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">0% <small>(0 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(1 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">11.76% <small>(2 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(17 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
@@ -267,28 +267,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">23</span>
+<span class="cline-any cline-yes">23</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -305,29 +305,29 @@
   { regex: /^null/, tokenType: 'NULL_LITERAL' }
 ];
 &nbsp;
-exports.getTokens = <span class="fstat-no" title="function not covered" >function getTokens(json) {</span>
-<span class="cstat-no" title="statement not covered" >  var input = typeof json === 'string' ? json : JSON.stringify(json);</span>
+exports.getTokens = function getTokens(json) {
+  var input = typeof json === 'string' ? <span class="branch-0 cbranch-no" title="branch not covered" >json </span>: JSON.stringify(json);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var tokens = [];</span>
-<span class="cstat-no" title="statement not covered" >  var foundToken = false;</span>
+  var tokens = [];
+  var foundToken = false;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var match;</span>
-<span class="cstat-no" title="statement not covered" >  var i;</span>
-<span class="cstat-no" title="statement not covered" >  var numTokenTypes = tokenTypes.length;</span>
+  var match;
+  var i;
+  var numTokenTypes = tokenTypes.length;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  do {</span>
-<span class="cstat-no" title="statement not covered" >    for (i = 0; i &lt; numTokenTypes; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      match = tokenTypes[i].regex.exec(input);</span>
-<span class="cstat-no" title="statement not covered" >      if (match) {</span>
-<span class="cstat-no" title="statement not covered" >        tokens.push({ type: tokenTypes[i].tokenType, value: match[0] });</span>
-<span class="cstat-no" title="statement not covered" >        input = input.substring(match[0].length);</span>
-<span class="cstat-no" title="statement not covered" >        foundToken = true;</span>
-<span class="cstat-no" title="statement not covered" >        break;</span>
+  do {
+    for (i = 0; i &lt; numTokenTypes; i++) {
+      match = tokenTypes[i].regex.exec(input);
+      if (match) {
+        tokens.push({ type: tokenTypes[i].tokenType, value: match[0] });
+        input = input.substring(match[0].length);
+        foundToken = true;
+        break;
       } 
     }
   } while (input.length &gt; 0 &amp;&amp; foundToken);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return tokens;</span>
+  return tokens;
 }
 &nbsp;
 &nbsp;
@@ -335,7 +335,7 @@ exports.getTokens = <span class="fstat-no" title="function not covered" >functio
 </table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 11:38:58 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Thu Apr 27 2017 18:57:24 GMT+0000 (UTC)</div>
 </div>
 </body>
 </html>
