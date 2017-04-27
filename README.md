@@ -1,6 +1,6 @@
 # npmtest-json-colorizer
 
-#### test coverage for  [json-colorizer (v1.1.0)](https://github.com/joeattardi/json-colorizer#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-json-colorizer.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-json-colorizer) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-json-colorizer.svg)](https://travis-ci.org/npmtest/node-npmtest-json-colorizer)
+#### basic test coverage for  [json-colorizer (v1.1.0)](https://github.com/joeattardi/json-colorizer#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-json-colorizer.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-json-colorizer) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-json-colorizer.svg)](https://travis-ci.org/npmtest/node-npmtest-json-colorizer)
 
 #### A library to format JSON with colors for display in the console
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-json-colorizer/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-json-colorizer/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-json-colorizer/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-json-colorizer/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-json-colorizer/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-json-colorizer/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-json-colorizer/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-json-colorizer/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-json-colorizer/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-json-colorizer/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-json-colorizer/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-json-colorizer/build/coverage.html/index.html)
 
@@ -78,7 +78,8 @@
     "scripts": {
         "test": "mocha src/test"
     },
-    "version": "1.1.0"
+    "version": "1.1.0",
+    "bin": {}
 }
 ```
 
